@@ -1,3 +1,51 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#main_box {
+	width: 100%;
+	height: 380px;
+	padding: 40px 0;
+	position: relative;
+	background-image: url('background.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+#main_box .container {
+	position: relative;
+	top: 25%;
+	margin-bottom: 0;
+	margin: auto;
+}
+
+#main_box .container .jumbotron {
+	background-color: rgba(250, 118, 44, 0.86);
+}
+
+.search-box {
+	text-align: center;
+}
+
+.search-box .input-group {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.input-group input {
+	height: 52px;
+	font-size: 21px;
+}
+
+.input-group button {
+	height: 52px;
+	font-size: 19px;
+}
+
+.btn-info {
+	background: #00ADAA;
+}
+
+.btn-info:hover {
+	background: #069996;
+}
