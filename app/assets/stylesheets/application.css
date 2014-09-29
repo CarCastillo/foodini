@@ -20,15 +20,23 @@
  }
 
 body { 
-	padding-top: 65px;
+	padding-top: 50px;
 }
 
 .navbar {
 	background: #FA762C;
 	border-bottom: solid 1px #FA762C;
-	height: 65px;
+	height: 50px;
+}
+
+.navbar-brand {
+	padding: 5px 15px;
 }
 
 .navbar-brand img {
 	width: 115px;
+}
+
+.fa {
+	color: white;
 }

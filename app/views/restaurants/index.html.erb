@@ -5,6 +5,7 @@
 	<tr>
 	  <th>Name</th>
 	  <th>Category</th>
+	  <th>Tags</th>
 	  <th>Lat</th>
 	  <th>Lon</th>
 	  <th colspan="3"></th>
@@ -16,6 +17,7 @@
 	  <tr>
 		<td><%= restaurant.name %></td>
 		<td><%= restaurant.category %></td>
+		<td><%= restaurant.tag_list %></td>
 		<td><%= restaurant.lat %></td>
 		<td><%= restaurant.lon %></td>
 		<td><%= link_to 'Show', restaurant, :class => 'btn btn-primary' %></td>
@@ -28,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Restaurant', new_restaurant_path %>
+<%= link_to 'New Restaurant', new_restaurant_path, :class => 'btn btn-primary' %>

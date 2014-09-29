@@ -14,9 +14,16 @@
 
 #main_box .container {
 	position: relative;
-	top: 25%;
-	margin-bottom: 0;
-	margin: auto;
+	top: 17%;
+	/*margin-bottom: 0;
+	margin: auto;*/
+}
+
+#main_box h2 {
+	margin-top: 0;
+	margin-bottom: 20px;
+	text-align: center;
+	color: white;
 }
 
 #main_box .container .jumbotron {

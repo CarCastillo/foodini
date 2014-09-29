@@ -1,33 +1,37 @@
 <%= form_for(@restaurant) do |f| %>
   <% if @restaurant.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@restaurant.errors.count, "error") %> prohibited this restaurant from being saved:</h2>
+	<div id="error_explanation">
+	  <h2><%= pluralize(@restaurant.errors.count, "error") %> prohibited this restaurant from being saved:</h2>
 
-      <ul>
-      <% @restaurant.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+	  <ul>
+	  <% @restaurant.errors.full_messages.each do |message| %>
+		<li><%= message %></li>
+	  <% end %>
+	  </ul>
+	</div>
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+	<%= f.label :name %><br>
+	<%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :category %><br>
-    <%= f.text_field :category %>
+	<%= f.label :category %><br>
+	<%= f.text_field :category %>
   </div>
   <div class="field">
-    <%= f.label :lat %><br>
-    <%= f.text_field :lat %>
+	<%= f.label :tag_list, "Palabras clave (separadas por comas)" %><br>
+	<%= f.text_field :tag_list %>
   </div>
   <div class="field">
-    <%= f.label :lon %><br>
-    <%= f.text_field :lon %>
+	<%= f.label :lat %><br>
+	<%= f.text_field :lat %>
+  </div>
+  <div class="field">
+	<%= f.label :lon %><br>
+	<%= f.text_field :lon %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+	<%= f.submit %>
   </div>
 <% end %>
