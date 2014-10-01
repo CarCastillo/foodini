@@ -4,7 +4,11 @@ class RestaurantsController < ApplicationController
   # GET /restaurants
   # GET /restaurants.json
   def index
-	@restaurants = Restaurant.all
+	if params[:tag]
+		@restaurants = Restaurant.tagged_with(params[:tag])
+	else
+		@restaurants = Restaurant.all
+	end
   end
 
   # GET /restaurants/1
@@ -59,6 +63,10 @@ class RestaurantsController < ApplicationController
 	  format.html { redirect_to restaurants_url, notice: 'Restaurant was successfully destroyed.' }
 	  format.json { head :no_content }
 	end
+  end
+
+  def search
+    @restaurants = Restaurant.tagged_with(params[:search])
   end
 
   private

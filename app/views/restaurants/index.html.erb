@@ -17,12 +17,12 @@
 	  <tr>
 		<td><%= restaurant.name %></td>
 		<td><%= restaurant.category %></td>
-		<td><%= restaurant.tag_list %></td>
+		<td class="tag_list"><%= raw restaurant.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></td>
 		<td><%= restaurant.lat %></td>
 		<td><%= restaurant.lon %></td>
-		<td><%= link_to 'Show', restaurant, :class => 'btn btn-primary' %></td>
-		<td><%= link_to 'Edit', edit_restaurant_path(restaurant), :class => 'btn btn-primary' %></td>
-		<td><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' %></td>
+		<td><%= link_to 'Ver', restaurant, :class => 'btn btn-primary' %></td>
+		<td><%= link_to 'Editar', edit_restaurant_path(restaurant), :class => 'btn btn-primary' %></td>
+		<td><%= link_to 'Eliminar', restaurant, method: :delete, data: { confirm: '¿Está seguro que quiere eliminar el restaurante de la lista?' }, :class => 'btn btn-danger' %></td>
 	  </tr>
 	<% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Restaurant', new_restaurant_path, :class => 'btn btn-primary' %>
+<%= link_to 'Afiliar restaurante', new_restaurant_path, :class => 'btn btn-primary' %>
