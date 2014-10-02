@@ -5,7 +5,7 @@
         	<% @restaurants.each do |restaurant| %>
 	            <div class="row">
 	                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-	                    <div class="panel panel-default" onclick="return init_map(0);">
+	                    <div class="panel panel-default" onclick="return initialize();">
 	                        <div class="row padall">
 	                            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 	                                <span></span>
@@ -13,16 +13,10 @@
 	                            </div>
 	                            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
 	                                <div class="clearfix">
-	                                    <!--<div class="pull-left">
-	                                        <span class="fa fa-dollar icon">499,000</span>
-	                                    </div>
-	                                    <div class="pull-right">
-	                                        900 SqFt | 1 Bedroom | 1 Bathroom
-	                                    </div>-->
 	                                </div>
-	                                <div>
+	                                <div class="info-title">
 	                                    <h4><span class="fa fa-map-marker icon"></span><%= restaurant.name %></h4>
-	                                    <%= restaurant.category %><span class="fa fa-lock icon pull-right">   Sold</span>
+	                                    <%= restaurant.category %><span class="fa fa-map-marker icon pull-right">   Ver en Mapa</span>
 	                                </div>
 	                            </div>
 	                        </div>

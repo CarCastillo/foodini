@@ -24,7 +24,7 @@
 	<span class="icon-bar"></span>
 	<span class="icon-bar"></span>
 	</button>
-	<a class="navbar-brand" href="#"><%= image_tag('logotipo_2.png') %></a>
+	<a class="navbar-brand" href="http://foodini.herokuapp.com/"><%= image_tag('logotipo_2.png') %></a>
   </div>
   <div class="collapse navbar-collapse">
 	<ul class="nav navbar-nav pull-right">
@@ -38,7 +38,8 @@
 
 <%= yield %>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js"></script>
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js"></script>-->
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=true_or_false"></script>
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>
