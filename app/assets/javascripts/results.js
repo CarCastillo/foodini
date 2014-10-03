@@ -1,15 +1,15 @@
 var map;
 var service;
 var infowindow;
+var query;
 
 $(function() {
 
-	var query;
     console.log( "ready!" );
 
-    $('.info-title .icon').click(function() {
-    	$query = ($(this).siblings('h4').find('span').html());
-    	console.log($query);
+    $('.padall').click(function() {
+    	query = ($(this).find('h4').text());
+    	console.log(query);
     });
 });
 
@@ -23,10 +23,10 @@ function initialize() {
 	});
 
   var request = {
-	location: myCenter,
-	radius: '5000',
-	query: 'Subway',
-	key: 'AIzaSyD7Rzp8OAzbJ40elnR1qCGAQlmOOT0XBqU'
+  	location: myCenter,
+  	radius: '5000',
+  	query: query,
+  	key: 'AIzaSyD7Rzp8OAzbJ40elnR1qCGAQlmOOT0XBqU'
   };
 
   infowindow = new google.maps.InfoWindow();
@@ -52,7 +52,9 @@ function createMarker(place) {
   });
 
   google.maps.event.addListener(marker, 'click', function() {
-    infowindow.setContent(place.name);
+
+    var info = '<div> <span style="padding-right: 10px";>'+place.name +'</span><img style="width: 15px;" src="http://www.findme4u.com/business/assets/icons/restaurant@2X.png" /></div>'
+    infowindow.setContent(info);
     infowindow.open(map, this);
   });
 }

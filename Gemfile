@@ -35,6 +35,8 @@ gem 'jbuilder', '~> 2.0'
 
 gem 'acts-as-taggable-on', '~> 3.4'
 
+gem "paperclip", "~> 4.2"
+
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring

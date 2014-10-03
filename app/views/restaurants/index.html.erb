@@ -4,6 +4,7 @@
   <thead>
 	<tr>
 	  <th>Name</th>
+	  <th>Logo</th>
 	  <th>Category</th>
 	  <th>Tags</th>
 	  <th>Lat</th>
@@ -16,6 +17,7 @@
 	<% @restaurants.each do |restaurant| %>
 	  <tr>
 		<td><%= restaurant.name %></td>
+		<td><%= image_tag restaurant.logo.url(:medium) %></td>
 		<td><%= restaurant.category %></td>
 		<td class="tag_list"><%= raw restaurant.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></td>
 		<td><%= restaurant.lat %></td>
