@@ -56,3 +56,13 @@
 .btn-info:hover {
 	background: #069996;
 }
+
+@media (max-width: 600px) {
+  .jumbotron h2 {
+    font-size: 17px;
+  }
+  .input-group input, .input-group-btn input {
+  	font-size: 13px;
+	padding: 2px 4px;
+  }
+}
