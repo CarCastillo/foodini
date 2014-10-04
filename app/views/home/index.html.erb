@@ -7,7 +7,7 @@
 			<div class="search-box">
 				<%= form_tag search_restaurants_path, :method => 'get' do %>
 					<div class="input-group">
-						<%= text_field_tag :search, params[:search],  placeholder: 'Escribe aquí algo sobre la comida que quieres...', class: 'form-control' %>
+						<%= text_field_tag :search, params[:search],  placeholder: 'Escribe aquí un ingrediente', class: 'form-control' %>
 						<div class="input-group-btn">
 							<%= submit_tag "Buscar", :tag_list => nil, class: 'btn btn-info' %>
 						</div>
