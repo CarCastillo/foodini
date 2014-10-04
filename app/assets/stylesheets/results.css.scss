@@ -51,3 +51,9 @@ img {
 .padall {
     cursor: pointer;
 }
+
+@media (max-width: 600px) {
+  .padall img {
+    max-width: 25%;
+  }
+}
