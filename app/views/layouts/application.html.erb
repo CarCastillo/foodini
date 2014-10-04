@@ -35,7 +35,15 @@
   </div><!--/.nav-collapse -->
   </div>
 </div>
-
+<% if !flash.empty? %>
+<div id="flash"> 
+    <% flash.keys.each do |k| %> 
+        <div class="<%= k %>">
+            <%= flash[k] %>
+        </div>  
+    <% end %>   
+</div>
+<% end %>
 <%= yield %>
 
 <!--<script src="https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js"></script>-->

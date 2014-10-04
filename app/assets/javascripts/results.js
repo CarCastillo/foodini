@@ -2,14 +2,15 @@ var map;
 var service;
 var infowindow;
 var query;
+var userLocation;
 
 $(function() {
 
-    console.log( "ready!" );
+    //console.log( "ready!" );
 
     $('.padall').click(function() {
     	query = ($(this).find('h4').text());
-    	console.log(query);
+    	//console.log(query);
     });
 });
 
@@ -36,10 +37,10 @@ function initialize() {
 
 function callback(results, status) {
   if (status == google.maps.places.PlacesServiceStatus.OK) {
-	for (var i = 0; i < results.length; i++) {
-	  var place = results[i];
-	  createMarker(results[i]);
-	}
+  	for (var i = 0; i < results.length; i++) {
+  	  var place = results[i];
+  	  createMarker(results[i]);
+  	}
   }
 }
 
