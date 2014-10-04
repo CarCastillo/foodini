@@ -4,12 +4,12 @@
 
 #main_box {
 	width: 100%;
-	height: 430px;
+	height: 100%;
 	padding: 40px 0;
 	position: relative;
 	background-image: image-url('background.jpg');
 	background-size: 100%;
-	background-repeat: no-repeat;
+	/*background-repeat: no-repeat;*/
 }
 
 #main_box .container {

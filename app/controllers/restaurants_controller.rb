@@ -69,7 +69,7 @@ class RestaurantsController < ApplicationController
     @restaurants = Restaurant.tagged_with(params[:search])
     
     if @restaurants.empty?
-    	redirect_to home_index_path, alert: 'No se encontraron restaurantes con los criterios de busqueda ingresados. Por favor intente mas tarde.' 
+    	redirect_to home_index_path, alert: 'No se encontraron restaurantes con los criterios de busqueda ingresados. Por favor intente con otra palabra.' 
     end
   end
 
